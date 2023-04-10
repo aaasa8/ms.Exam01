@@ -12,12 +12,15 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//        //방법1
+//        binding.btnDisplay.setOnClickListener(MyClick())
 
-//        binding.btnDisplay.setOnLongClickListener(object  : View.OnClickListener{
-//            override fun onClick(p0: View?) {
-//
-//            }
-//
-//        })
     }
+//    inner class MyClick : View.OnClickListener {
+//        override fun onClick(p0: View?) {
+//            val str = binding.etText.getText().toString()
+//            binding.tvDisplay.setText(str)
+//        }
+//
+//    }
 }
