@@ -12,26 +12,26 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        방법1
-//        binding.btnDisplay.setOnClickListener(MyClick())
-				//방법3
-				binding.btnDisplay.setOnClickListener(object : View.OnClickListener {
-					override fun onClick(p0: View?){
-						binding.tvDisplay.setText(binding.etText.getText().toString())
-						}
-				})
-				//방법4
-				binding.btnDisplay.setOnClickListener {
-					binding.tvDisplay.setText(binding,etText.getText().toString())
-				}
-    }
+			//방법3
+			binding.btnDisplay.setOnClickListener(object : View.OnClickListener {
+				override fun onClick(p0: View?){
+					binding.tvDisplay.setText(binding.etText.getText().toString())
+					}
+			})
+			//방법4
+			binding.btnDisplay.setOnClickListener {
+				binding.tvDisplay.setText(binding,etText.getText().toString())
+			}
+   }
 		//방법2
 		/*val click = object : View.OnClickListener {
 			override fun onClick(p0: View?){
 				binding.tvDisplay.setText(binding.etText.getText().toString())
 }*/
 
-
+//방법1
+//onCreate부분
+//  binding.btnDisplay.setOnClickListener(MyClick())
 //    inner class MyClick : View.OnClickListener {
 //        override fun onClick(p0: View?) {
 //            val str = binding.etText.getText().toString()
