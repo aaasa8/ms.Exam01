@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 			})
 			//방법4
 			binding.btnDisplay.setOnClickListener {
-				binding.tvDisplay.setText(binding,etText.getText().toString())
+				binding.tvDisplay.setText(binding.etText.getText().toString())
 			}
    }
 		//방법2
