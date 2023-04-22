@@ -12,6 +12,21 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//다이얼로그
+binding.btnDisplay.setOnClickListener{
+	val text = binding.etText.text
+	AlertDialog.Builder(this).run{
+		setTitle("입력?")
+		setMessage("$text")
+		setPositiveButton("확인",object: DialogInterfave.OnclickListener{
+			override fun onClick(dialog: DialogInterface?, which: Int){
+				binding.tvDisplay.setText(text)
+			}
+		})
+		setNegativeButton("취소", null)
+		show()
+	}
+}
 			//방법3
 			binding.btnDisplay.setOnClickListener(object : View.OnClickListener {
 				override fun onClick(p0: View?){
